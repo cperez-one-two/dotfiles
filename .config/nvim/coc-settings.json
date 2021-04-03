@@ -1,0 +1,44 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python",
+    "java"
+  ],
+  // coc-explorer
+  "explorer.icon.enableNerdfont": true,
+  "explorer.keyMappings.global": {
+    "v": "open:vsplit"
+  },
+  // emmet
+  "emmet.includeLanguages": {
+    "vue-html": "html"
+  },
+  // eslint
+  "eslint.autoFixOnSave": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown"
+  ],
+  // prettier
+  "prettier.tabWidth": 2,
+  "prettier.disableLanguages": ["vue"],
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
+  // tailwind
+  "tailwindCSS.emmetCompletions": true,
+  "coc.source.emoji.enable": true,
+  "coc.source.emoji.filetypes": ["markdown"]
+}

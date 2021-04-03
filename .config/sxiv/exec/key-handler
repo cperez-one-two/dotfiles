@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+while read file
+do
+	case "$1" in
+	"C-w")
+		ln -sf "$file" "$HOME/.local/share/bg" &&
+		feh --bg-fill --no-xinerama "$HOME/.local/share/bg"
+		notify-send -i "$file" "Changing wallpaper (filled)..."
+		;;
+	"C-s")
+		ln -sf "$file" "$HOME/.local/share/bg" &&
+		feh --bg-scale --no-xinerama "$HOME/.local/share/bg"
+		notify-send -i "$file" "Changing wallpaper (scaled)..."
+		;;
+	"C-c")
+		ln -sf "$file" "$HOME/.local/share/bg" &&
+		feh --bg-center "$HOME/.local/share/bg"
+		notify-send -i "$file" "Changing wallpaper (centered)..."
+		;;
+	"C-t")
+		notify-send "File:" "$file"
+		;;
+	"C-r")
+		name="$(dmenu -p "Rename file to: ")" 2> /dev/null
+		if ! [ -z "$name" ] ; then
+			mv "$file" "$name"
+		fi
+		;;
+	esac
+done

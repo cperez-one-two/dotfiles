@@ -1,0 +1,32 @@
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# run sudo without typing it for these programs
+for x in pacman mount umount tlp-stat; do
+  alias $x="sudo $x"
+done
+
+# Colorize commands when possible.
+alias \
+  ls="ls -hN --color=auto --group-directories-first" \
+  grep="grep --color=auto" \
+  diff="diff --color=auto"
+
+# Common commands
+alias \
+  shutdown="shutdown -h now" \
+  la="ls -al" \
+  pfetch="PF_INFO='ascii title os host kernel uptime pkgs memory palette' pfetch" \
+  wp="sxiv ~/pics/wallpapers" \
+  mkdir="mkdir -p" \
+  scr="scrot '%Y-%m-%d-%M_%X' -e 'mv \$f \$\$SCROTS'" \
+  scrs="scrot '%Y-%m-%d-%M_%X' -e 'mv \$f \$\$SCROTS' -s" \
+
+# Directory Shortcuts
+alias \
+  home="$HOME" \
+  dl="$HOME/Downloads" \
+  proj="$HOME/projects" \
+  pics="$HOME/pics" \
+  config="$HOME/.config" \
+  wallpapers="$HOME/pics/wallpapers"

@@ -1,0 +1,27 @@
+#!/bin/zsh
+# Profile. Environment variables go here.
+
+# Default programs
+export EDITOR="nvim"
+export TERMINAL="kitty"
+export BROWSER="brave"
+
+# $PATH variables
+# ~/.local/bin
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+# ~/.emacs.d/bin
+export PATH="$PATH:$HOME/.emacs.d/bin"
+
+# ~/ cleanup
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export LESSHISTFILE="-"
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export SCROTS="$HOME/pics/scrots"
+
+# Qt applications styling
+export QT_STYLE_OVERRIDE=gtk2

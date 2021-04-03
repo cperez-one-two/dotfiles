@@ -1,0 +1,7 @@
+#!/bin/sh
+xset s off -dpms                    # Turn off screensaver
+xsetroot -cursor_name left_ptr &    # fix cursor
+remaps &                            # Remap keys script, uses xinputd
+
+# Notifications
+dunst &
