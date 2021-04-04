@@ -10,7 +10,7 @@ done
 alias \
   ls="ls -hN --color=auto --group-directories-first" \
   grep="grep --color=auto" \
-  diff="diff --color=auto"
+  diff="diff --color=auto" \
 
 # Common commands
 alias \
@@ -21,6 +21,8 @@ alias \
   mkdir="mkdir -p" \
   scr="scrot '%Y-%m-%d-%M_%X' -e 'mv \$f \$\$SCROTS'" \
   scrs="scrot '%Y-%m-%d-%M_%X' -e 'mv \$f \$\$SCROTS' -s" \
+  z="zathura" \
+  v="$EDITOR"
 
 # Directory Shortcuts
 alias \
